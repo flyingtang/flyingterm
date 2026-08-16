@@ -30,7 +30,7 @@ Personal and educational use — see [LICENSE](LICENSE).
 - Themes and status-bar latency
 - **MultiExec** broadcast + multi-line compose (Ctrl+Enter)
 - Quick-commands bar (snippets)
-- Local shell (Windows ConPTY / Unix PTY)
+- Local shell (Windows: prefers Git Bash — bundled MinGit or system Git)
 - Terminal recording / playback
 
 ### Script engine (macros)
@@ -44,12 +44,12 @@ Personal and educational use — see [LICENSE](LICENSE).
 - Global tunnel panel
 
 ### Extra protocols
-- Serial · Telnet · RDP / VNC / MOSH (launches system clients)
+- Serial · Telnet · **embedded RDP (clipboard + audio)** · VNC / MOSH (system clients)
 - X11 forwarding (Windows: VcXsrv / Xming)
 - System tray · optional app lock · **auto-update**
 
 ### Not included (by design)
-Embedded RDP client, full X.org bundle, Cygwin/MSYS toolbox — use dedicated tools.
+Full desktop-product RDP extras (drive/printer redirect, GPU), full X.org bundle, Cygwin/MSYS toolbox — use dedicated tools. Embedded RDP covers connect + video + keyboard/mouse + **text clipboard + audio**; “Open with system client” remains available.
 
 ---
 
@@ -115,6 +115,8 @@ Requires a **shell** tab (SSH / local / telnet / serial). Pure SFTP / RDP / VNC 
 | GitHub | https://github.com/flyingtang/flyingterm |
 
 Issues and release notes are published on both mirrors when possible.
+
+**Maintainers:** how to sync `open/`, get Gitee/GitHub tokens, and one-command release → [PUBLISH.md](PUBLISH.md).
 
 ---
 

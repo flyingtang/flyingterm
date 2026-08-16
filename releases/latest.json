@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "notes": "FlyingTerm 0.1.0 — see release notes on Gitee/GitHub.",
+  "pub_date": "2026-08-16T09:36:13.566Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTnYwMHVpY1RnbDlEWmhYRnlMUUhPblFpNElFRnNCTnR5OHRKNTBZUFVMdlR6VlVLb2ZGWG9oT0gwUUxJcmd3RTZ4N3l1UVZqeTNoMHd1WGFqeG5xK1FvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2ODcyNzk3CWZpbGU6Rmx5aW5nVGVybV8wLjEuMF94NjQtc2V0dXAuZXhlCkZnQnJCVVk0Rkl1UnBJQnFBM2N1Y3ZVVVdtZVNlRkQrbzd2S0Z0NVlCQ21yd28vQm9zcTZMVzdPQmsyaWpLVTJnd2VKUUhGdnlFaGN6ZzVLazF4NkNRPT0K",
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_x64-setup.exe"
+    }
+  }
+}

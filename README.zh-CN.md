@@ -30,7 +30,7 @@
 - 主题、状态栏延迟
 - **MultiExec** 广播 + 多行编写（Ctrl+Enter）
 - 快捷命令条（片段）
-- 本地 Shell（Windows ConPTY / Unix PTY）
+- 本地 Shell（Windows 优先 Git Bash：可内置 MinGit 或使用系统 Git）
 - 终端录制 / 回放
 
 ### 脚本引擎（宏）
@@ -44,12 +44,12 @@
 - 全局隧道面板
 
 ### 其它协议与增强
-- 串口 · Telnet · RDP / VNC / MOSH（调用系统客户端）
+- 串口 · Telnet · **内嵌 RDP（文字剪贴板 + 音频）** · VNC / MOSH（系统客户端）
 - X11 转发（Windows 请装 VcXsrv / Xming）
 - 系统托盘 · 可选应用锁 · **自动升级**
 
 ### 有意不做
-内嵌 RDP、完整 X.org、Cygwin/MSYS 工具箱 — 请用专用软件。
+完整桌面级 RDP 附加能力（盘符/打印机、GPU）、完整 X.org、Cygwin/MSYS 工具箱 — 请用专用软件。内嵌 RDP 覆盖连接、画面、键鼠、**文字剪贴板与音频**；仍可「用系统客户端打开」。
 
 ---
 
@@ -115,6 +115,8 @@
 | GitHub | https://github.com/flyingtang/flyingterm |
 
 Issue 与发版说明会尽量在两边同步。
+
+**维护者：** 同步 `open/`、申请 Gitee/GitHub Token、一条命令发版 → 见 [PUBLISH.md](PUBLISH.md)。
 
 ---
 
