@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "notes": "FlyingTerm 0.1.0 — see release notes on Gitee/GitHub.",
+  "pub_date": "2026-08-16T00:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "REPLACE_WITH_BUILD_SIGNATURE",
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_x64-setup.nsis.zip"
+    },
+    "darwin-aarch64": {
+      "signature": "REPLACE_WITH_BUILD_SIGNATURE",
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_aarch64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "REPLACE_WITH_BUILD_SIGNATURE",
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_x64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "REPLACE_WITH_BUILD_SIGNATURE",
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_amd64.AppImage.tar.gz"
+    }
+  }
+}
