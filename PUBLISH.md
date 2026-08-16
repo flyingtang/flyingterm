@@ -10,147 +10,89 @@ The development tree stays in the private/monorepo FlyingTerm project.
 
 ---
 
-## 中文：一条命令发布（推荐）
+## 中文：一条命令发布（所有平台相同）
 
-### 1. 本地配置文件（token **不要**提交到 git）
+### 1. 首次配置（token **不要**提交）
 
-在 **你准备执行命令的目录**（一般是 FlyingTerm 开发仓根目录）:
-
-```bash
-./tools/publish-open.sh --init
-# 生成: ./publish-open.local.env
+```powershell
+npm run release -- --init
 ```
 
-或手动：
-
-```bash
-cp tools/publish-open.env.example publish-open.local.env
-```
-
-编辑 `publish-open.local.env`：
+编辑生成的 `publish-open.local.env`：
 
 | 项 | 含义 |
 |---|---|
-| `OPEN_PUBLIC_DIR` | 公开仓本机克隆路径，**相对「执行命令时的当前目录」**；默认 `./flyingterm-public`，不存在会自动 `git clone` |
-| `GITHUB_REPO_URL` / `GITEE_REPO_URL` | 公开源码仓库地址（可改） |
-| `GITEE_TOKEN` 或 `GITEE_TOKEN_FILE` | Gitee API 令牌（上传 Release） |
-| `GH_TOKEN` 或 `GH_TOKEN_FILE` | GitHub 令牌（上传 Release，需 `repo` 权限） |
+| `OPEN_PUBLIC_DIR` | 公开仓本机克隆路径（相对当前目录；默认 `./flyingterm-public`，不存在会自动 clone） |
+| `GITHUB_REPO_URL` / `GITEE_REPO_URL` | 公开仓库地址 |
+| `GH_TOKEN` 或 `GH_TOKEN_FILE` | GitHub token（`repo` 权限，上传 Release） |
+| `GITEE_TOKEN` 或 `GITEE_TOKEN_FILE` | Gitee token（上传 Release，可选） |
 
-`publish-open.local.env`、`secrets/`、`*.token` 已在 `.gitignore` 中。
+### 2. 日常发布（Windows / macOS / Linux 同一条）
 
-也可把 token 放进单独文件（同样勿提交）:
-
-```bash
-mkdir -p secrets
-echo '你的Gitee令牌' > secrets/gitee.token
-# 在 publish-open.local.env 里写:
-# GITEE_TOKEN_FILE=./secrets/gitee.token
+```powershell
+npm run release
 ```
 
-### 2. Token 怎么拿？
+可选指定版本（默认读 `package.json`）：
 
-**Gitee（`GITEE_TOKEN`）**
-
-1. 打开：https://gitee.com/profile/personal_access_tokens  
-2. 生成私人令牌，勾选能管理仓库 / Release / 附件的权限  
-3. 复制令牌（只显示一次）写入 `publish-open.local.env` 的 `GITEE_TOKEN=`，或写入 `GITEE_TOKEN_FILE` 指向的文件  
-
-这不是网页日常登录，而是给脚本调 API 用的。
-
-**GitHub（`GH_TOKEN`，上传 Release 必填）**
-
-1. https://github.com/settings/tokens 新建 classic token，勾选 **`repo`**
-2. 写入 `publish-open.local.env` 的 `GH_TOKEN=`，或 `GH_TOKEN_FILE` 指向的文件
-
-脚本走 GitHub API 上传，**不依赖**本机安装 `gh`（Windows 上 PATH 里经常没有 `gh`）。
-
-### 3. 一条命令
-
-```bash
-# 在 FlyingTerm 开发仓根目录（或任意目录，只要配置里的相对路径按该目录解析）
-./tools/publish-open.sh --all --version 0.1.0
+```powershell
+npm run release -- --version 0.1.1
 ```
 
-等价于：当前系统签名打包 → 暂存 `open/releases/` → 同步 `open/` 到公开仓并 push GitHub+Gitee → 上传安装包到两边 Release。
+脚本会**自动识别当前系统**并完成：
+
+| 本机系统 | 默认产物 |
+|---------|---------|
+| Windows | NSIS + MSI |
+| macOS | universal `.app` / `.dmg`（含双架构远程桌面客户端） |
+| Linux | deb + rpm + AppImage |
+
+流程：签名打包 → 暂存 `open/releases/` → 同步公开仓文档 → 上传 GitHub / Gitee **Releases**。
 
 注意：
 
-- **安装包不会进 git**。`--sync` 只推文档 / `latest.json`；`.dmg` / `.exe` 靠 `--upload` 传到 GitHub/Gitee **Releases**。
-- Mac 上 `--all` / `--build` 默认打 **universal**（x64+arm）。已打好包时用 `--skip-build` 避免重编。
-- Windows 只能打 Windows 包；Linux 需在 Linux 上再编。
+- 安装包**不会**进 git；`--sync` 只推文档 / `latest.json`。
+- 一条命令只打**当前系统**的包。三端完整发布需在 Win / Mac / Linux 各跑一次 `npm run release`（后跑的会合并进同一 Release tag）。
+- 已打好包只需上传：`npm run release -- --skip-build`
+- 只要同步文档：`npm run open:publish -- --sync`
 
-只要同步文档：
+### 3. Token
 
-```bash
-./tools/publish-open.sh --sync
-```
-
-只要补传安装包（Mac/Linux 产物已放进 `open/releases/`）：
-
-```bash
-./tools/publish-open.sh --upload --version 0.1.0
-```
-
-只预克隆公开仓：
-
-```bash
-./tools/publish-open.sh --ensure-clone
-```
-
-> **说明：** Windows 只能打 Windows 安装包。Mac/Linux 需在对应机器再跑 `--build --stage`，把产物放进开发仓 `open/releases/` 后执行 `--upload`。
-
-`npm run open:publish -- --help` 可看全部参数。
+- GitHub：https://github.com/settings/tokens （classic，勾选 `repo`）
+- Gitee：https://gitee.com/profile/personal_access_tokens  
 
 ---
 
-## English: one-command publish
+## English: one command (all platforms)
 
 ```bash
-./tools/publish-open.sh --init
-# edit ./publish-open.local.env (tokens, repo URLs, OPEN_PUBLIC_DIR relative to cwd)
-./tools/publish-open.sh --all --version 0.1.0
+npm run release -- --init   # once
+# edit publish-open.local.env
+npm run release             # or: npm run release -- --version 0.1.1
 ```
 
-- **Gitee token:** https://gitee.com/profile/personal_access_tokens → `GITEE_TOKEN` or `GITEE_TOKEN_FILE`
-- **GitHub:** `gh auth login` **or** https://github.com/settings/tokens (`repo`) → `GH_TOKEN` / `GH_TOKEN_FILE`
-- **OPEN_PUBLIC_DIR:** local clone of the *public* repo (not the same as nesting secrets in `open/` source tree). Default `./flyingterm-public` under the directory where you run the command; auto-cloned from `GITHUB_REPO_URL`.
+Same command on Windows / macOS / Linux — OS is detected automatically.
+
+| Host OS | Default bundles |
+|---------|-----------------|
+| Windows | nsis, msi |
+| macOS | universal app + dmg |
+| Linux | deb, rpm, appimage |
 
 Never commit `publish-open.local.env` / `secrets/` / `*.token`.
 
 ---
 
-## One-time: push `open/` as the public repo root (manual)
+## Manual / advanced
 
 ```bash
-cd open
-git init
-git add .
-git commit -m "docs: public FlyingTerm landing + license"
-git remote add github git@github.com:flyingtang/flyingterm.git
-git remote add gitee git@gitee.com:flyingtang/flyingterm.git
-git branch -M master
-git push -u github master
-git push -u gitee master
+npm run open:publish -- --help
+npm run open:publish -- --build --stage --version 0.1.1
+npm run open:publish -- --upload --version 0.1.1
 ```
 
-Prefer `./tools/publish-open.sh --sync` after `--init` instead of hand-copying.
+Updater feeds (in order):
 
-Legacy: `node tools/sync-open-remotes.mjs --push` (still needs `OPEN_PUBLIC_DIR`).
-
-## Release checklist (maintainers)
-
-1. Bump `package.json` + `src-tauri/tauri.conf.json` version (same number).
-2. Build signed installers (Windows / macOS / Linux as available).
-3. Stage: `node tools/stage-open-release.mjs --version X.Y.Z` (or included in `--all`).
-4. Optionally copy `open/releases/latest.json` → mycap-server `file/flyingterm/latest.json`.
-5. Sync public docs + `latest.json` (`--sync`).
-6. Upload Release assets on Gitee **and** GitHub (`--upload`).
-7. Smoke-test updater from a mainland network.
-
-## Updater endpoint order (in the app)
-
-1. Gitee raw `releases/latest.json` (CN-friendly, tiny JSON in git)
-2. `https://admin.flyingtang.cn/api/v1/noauth/flyingterm/latest.json`
-3. GitHub Releases `latest/download/latest.json` (global fallback)
-
-Installers should **not** be hosted on the 600G cloud box — only the small JSON may be served there.
+1. Gitee raw `releases/latest.json` (CN-friendly)
+2. Admin CDN mirror (optional)
+3. GitHub Releases `latest.json`

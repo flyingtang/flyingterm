@@ -15,7 +15,7 @@ Personal and educational use — see [LICENSE](LICENSE).
 ## Feature list
 
 ### Sessions
-- Session tree with folders, tags, and search — double-click to connect
+- Session tree with folders, tags, and search — click to connect
 - Import `~/.ssh/config`
 - Password / OpenSSH private key / Agent (Windows: OpenSSH named pipe + Pageant)
 - Jump host (ProxyJump)

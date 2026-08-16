@@ -15,7 +15,7 @@
 ## 功能清单
 
 ### 会话
-- 会话树：文件夹、标签、搜索 — 双击连接
+- 会话树：文件夹、标签、搜索 — 单击连接
 - 导入 `~/.ssh/config`
 - 密码 / OpenSSH 私钥 / Agent（Windows：OpenSSH 命名管道 + Pageant）
 - 跳板机（ProxyJump）

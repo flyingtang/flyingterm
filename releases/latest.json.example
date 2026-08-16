@@ -9,11 +9,11 @@
     },
     "darwin-aarch64": {
       "signature": "REPLACE_WITH_BUILD_SIGNATURE",
-      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_aarch64.app.tar.gz"
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm.app.tar.gz"
     },
     "darwin-x86_64": {
       "signature": "REPLACE_WITH_BUILD_SIGNATURE",
-      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_x64.app.tar.gz"
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm.app.tar.gz"
     },
     "linux-x86_64": {
       "signature": "REPLACE_WITH_BUILD_SIGNATURE",
