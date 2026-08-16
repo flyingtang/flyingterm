@@ -34,7 +34,7 @@ cp tools/publish-open.env.example publish-open.local.env
 | `OPEN_PUBLIC_DIR` | 公开仓本机克隆路径，**相对「执行命令时的当前目录」**；默认 `./flyingterm-public`，不存在会自动 `git clone` |
 | `GITHUB_REPO_URL` / `GITEE_REPO_URL` | 公开源码仓库地址（可改） |
 | `GITEE_TOKEN` 或 `GITEE_TOKEN_FILE` | Gitee API 令牌（上传 Release） |
-| `GH_TOKEN` 或 `GH_TOKEN_FILE` | GitHub 令牌；若已 `gh auth login` 可留空 |
+| `GH_TOKEN` 或 `GH_TOKEN_FILE` | GitHub 令牌（上传 Release，需 `repo` 权限） |
 
 `publish-open.local.env`、`secrets/`、`*.token` 已在 `.gitignore` 中。
 
@@ -57,17 +57,12 @@ echo '你的Gitee令牌' > secrets/gitee.token
 
 这不是网页日常登录，而是给脚本调 API 用的。
 
-**GitHub（二选一）**
+**GitHub（`GH_TOKEN`，上传 Release 必填）**
 
-- **推荐：** 安装 [GitHub CLI](https://cli.github.com/)，执行一次：
+1. https://github.com/settings/tokens 新建 classic token，勾选 **`repo`**
+2. 写入 `publish-open.local.env` 的 `GH_TOKEN=`，或 `GH_TOKEN_FILE` 指向的文件
 
-  ```bash
-  gh auth login
-  ```
-
-  之后可不用填 `GH_TOKEN`。
-
-- **或：** https://github.com/settings/tokens 新建 classic token，勾选 **`repo`**，写入 `GH_TOKEN=` 或 `GH_TOKEN_FILE`。
+脚本走 GitHub API 上传，**不依赖**本机安装 `gh`（Windows 上 PATH 里经常没有 `gh`）。
 
 ### 3. 一条命令
 
@@ -77,6 +72,12 @@ echo '你的Gitee令牌' > secrets/gitee.token
 ```
 
 等价于：当前系统签名打包 → 暂存 `open/releases/` → 同步 `open/` 到公开仓并 push GitHub+Gitee → 上传安装包到两边 Release。
+
+注意：
+
+- **安装包不会进 git**。`--sync` 只推文档 / `latest.json`；`.dmg` / `.exe` 靠 `--upload` 传到 GitHub/Gitee **Releases**。
+- Mac 上 `--all` / `--build` 默认打 **universal**（x64+arm）。已打好包时用 `--skip-build` 避免重编。
+- Windows 只能打 Windows 包；Linux 需在 Linux 上再编。
 
 只要同步文档：
 

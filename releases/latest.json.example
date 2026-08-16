@@ -17,7 +17,7 @@
     },
     "linux-x86_64": {
       "signature": "REPLACE_WITH_BUILD_SIGNATURE",
-      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_amd64.AppImage"
+      "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_amd64.AppImage.tar.gz"
     }
   }
 }
