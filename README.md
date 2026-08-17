@@ -57,7 +57,8 @@ Full desktop-product RDP extras (drive/printer redirect, GPU), full X.org bundle
 
 ### Windows
 1. Download `FlyingTerm_*_x64-setup.exe` from [Gitee](https://gitee.com/flyingtang/flyingterm/releases) or [GitHub](https://github.com/flyingtang/flyingterm/releases).
-2. Run the installer (Windows 10 1809+ / 11; WebView2 is bundled).
+2. Run the installer (Windows 10 1809+ / 11; setup embeds the WebView2 **offline** installer — no Microsoft CDN required).
+   - If WebView2 still fails: install [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703) manually, then re-run setup.
 3. Start **FlyingTerm** from the Start menu.
 
 ### macOS
