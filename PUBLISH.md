@@ -43,7 +43,7 @@ npm run release -- --version 0.1.1
 
 | 本机系统 | 默认产物 |
 |---------|---------|
-| Windows | NSIS + MSI |
+| Windows | NSIS（默认；体积更小、安装更稳。需要 MSI 时加 `--bundles nsis,msi`） |
 | macOS | universal `.app` / `.dmg`（含双架构远程桌面客户端） |
 | Linux | deb + rpm + AppImage |
 
@@ -75,7 +75,7 @@ Same command on Windows / macOS / Linux — OS is detected automatically.
 
 | Host OS | Default bundles |
 |---------|-----------------|
-| Windows | nsis, msi |
+| Windows | nsis（default; add msi only if needed: `--bundles nsis,msi`） |
 | macOS | universal app + dmg |
 | Linux | deb, rpm, appimage |
 

@@ -1,10 +1,10 @@
 {
   "version": "0.1.0",
   "notes": "FlyingTerm 0.1.0 — see release notes on Gitee/GitHub.",
-  "pub_date": "2026-08-17T01:35:21.579Z",
+  "pub_date": "2026-08-17T02:01:43.480Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTmdzWjBuOU5JVTZ2ZXpVUVFTaklwdDltN3FUTVIxMVIwUDJId0hIa28xeEUxbTFxYkNiRWZXaVJnejRGeGpPYTBicHQxMVlSQWFBVk1XY0MvWHpibndFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTMwNTIwCWZpbGU6Rmx5aW5nVGVybV8wLjEuMF94NjQtc2V0dXAuZXhlClhvUTRUdDdza2VyMmJOakZkRC9WWG1lUXgrV1c4cWx5UnJmblQwS2F6dU1KdWtjT215Q1UrQnZ0SnpzUDY2a0JndGtwSWlOWWMxWThIeXBmd1VnUURRPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTnFCalBJdkRUQ1U0cGNnRTB6MkZGMkdoT3NUd2FFTEdxZEc2L2kxYnNwYktQZUlac016QmF5SjBYeC9JOCtScUJmL1lPWUlvN2k3MzFob2lZTXhmalE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTMyMTAzCWZpbGU6Rmx5aW5nVGVybV8wLjEuMF94NjQtc2V0dXAuZXhlCjFVM1NYVkxPdXRNanl5cjh0b3BQT29yZ0I2OGlQaWRVVnBscXpPaHdiV2dDeE9SWmRVVnY3U0o1WnNuSnFMNWdpMWFySEN6SDB6eC9RWkkzSm0wRURBPT0K",
       "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.0/FlyingTerm_0.1.0_x64-setup.exe"
     },
     "darwin-x86_64": {
