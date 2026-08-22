@@ -2,4 +2,6 @@
 !.gitignore
 !README.md
 !latest.json
+!latest-full.json
 !latest.json.example
+!latest-full.json.example

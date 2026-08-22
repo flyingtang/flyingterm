@@ -56,10 +56,10 @@
 ## 安装
 
 ### Windows
-1. 从 [Gitee](https://gitee.com/flyingtang/flyingterm/releases) 或 [GitHub](https://github.com/flyingtang/flyingterm/releases) 下载 `FlyingTerm_*_x64-setup.exe`。
-2. 运行安装程序（需 Windows 10 1809+ / 11；安装包内嵌 WebView2 **离线**安装组件，不依赖微软 CDN）。
+1. **精简版（国内推荐）** `FlyingTerm_*_x64-setup.exe` — 不内嵌 WebView2，体积小，走 [Gitee](https://gitee.com/flyingtang/flyingterm/releases)；应用内更新也走 Gitee。需 Windows 10 1809+ / 11，且系统已有 Edge / WebView2（一般已自带）。
+2. **完整版** `FlyingTerm_*_x64-setup-webview2.exe` — 内嵌 WebView2 离线包（约 100MB+），放在 [GitHub](https://github.com/flyingtang/flyingterm/releases)；应用内更新从 GitHub 下安装包。适合干净系统或不方便单独装运行时的电脑。
    - 若提示「安装被中止 / 无法写入文件」：先完全退出 FlyingTerm（含托盘），在任务管理器结束残留的 `FlyingTerm.exe`，再重跑安装。
-   - 若仍提示 WebView2 失败：先手动安装 [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703)，再重跑安装包。
+   - 精简版打开后只有灰底：先装 [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703)，或改用完整版安装包。
 3. 从开始菜单启动 **FlyingTerm**。
 
 ### macOS
@@ -92,7 +92,7 @@
 2. 默认启动时检查更新（设置 →「启动时检查更新」）。
 3. 也可 **设置 → 立即检查**。
 4. 有新版本时点 **更新并重启**。
-5. 国内用户优先走 **Gitee** 拉取安装包，大文件不走厂商云主机流量。
+5. 国内：**精简版**从 **Gitee** 拉安装包；**完整版** `*-webview2.exe` 先查清单，再从 **GitHub** 下大安装包。
 6. 若厂商更换了签名密钥，需**手动安装一次**新包，之后可继续自动更新。
 
 ---

@@ -56,10 +56,10 @@ Full desktop-product RDP extras (drive/printer redirect, GPU), full X.org bundle
 ## Install
 
 ### Windows
-1. Download `FlyingTerm_*_x64-setup.exe` from [Gitee](https://gitee.com/flyingtang/flyingterm/releases) or [GitHub](https://github.com/flyingtang/flyingterm/releases).
-2. Run the installer (Windows 10 1809+ / 11; setup embeds the WebView2 **offline** installer — no Microsoft CDN required).
+1. **Slim (recommended in China)** `FlyingTerm_*_x64-setup.exe` — no bundled WebView2, small enough for [Gitee](https://gitee.com/flyingtang/flyingterm/releases); in-app updates also use Gitee. Needs Windows 10 1809+ / 11 with Edge / WebView2 already on the system (typical).
+2. **Full** `FlyingTerm_*_x64-setup-webview2.exe` — embeds the WebView2 offline installer (~100MB+), hosted on [GitHub](https://github.com/flyingtang/flyingterm/releases); in-app updates download the installer from GitHub. Use this on a clean OS or when you cannot install the runtime yourself.
    - If install aborts with “unable to write file”: fully quit FlyingTerm (and tray), end leftover `FlyingTerm.exe` in Task Manager, then re-run setup.
-   - If WebView2 still fails: install [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703) manually, then re-run setup.
+   - Slim build gray window: install [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703), or use the full installer.
 3. Start **FlyingTerm** from the Start menu.
 
 ### macOS
@@ -92,7 +92,7 @@ Data directory:
 2. By default the app checks on startup (Settings → “Check for updates on start”).
 3. Or open **Settings → Check now**.
 4. If a newer signed build exists → **Update and restart**.
-5. Mainland China: updates normally resolve via **Gitee** first so traffic does not hit the vendor cloud for large installers.
+5. Mainland China: the **slim** installer updates via **Gitee** (small package). The **full** `*-webview2.exe` edition checks the same Gitee/GitHub JSON first, then downloads the large installer from **GitHub**.
 6. After the vendor rotates signing keys, install the new package **once manually**; then auto-update works again.
 
 ---
