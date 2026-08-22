@@ -29,11 +29,10 @@ Large binaries are **gitignored**. Only `latest.json` (and docs) should be commi
 
    `https://gitee.com/flyingtang/flyingterm/raw/master/releases/latest.json`
 
-5. Also copy the same file to mycap-server:
+5. Optional last-resort copy of the same JSON (not the installers) is proxied by cloudnote at:
 
-   `file/flyingterm/latest.json`
-
-   served at `https://admin.flyingtang.cn/api/v1/noauth/flyingterm/latest.json`
+   `https://note.flyingtang.cn/api/v1/noauth/flyingterm/latest.json`
+   `https://flyingtang.cn/api/v1/noauth/flyingterm/latest.json`
 6. Create a Release tag `vX.Y.Z` on **both** Gitee and GitHub; upload all installers + `.sig` files.
 
 Helper: from the FlyingTerm repo root:
