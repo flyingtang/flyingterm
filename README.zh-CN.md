@@ -30,7 +30,7 @@
 - 主题、状态栏延迟
 - **MultiExec** 广播 + 多行编写（Ctrl+Enter）
 - 快捷命令条（片段）
-- 本地 Shell（Windows 优先 Git Bash：可内置 MinGit 或使用系统 Git）
+- 本地 Shell（Windows 优先 Git Bash：默认用系统 Git；可选安装包内置 PortableGit）
 - 终端录制 / 回放
 
 ### 脚本引擎（宏）
@@ -58,6 +58,7 @@
 ### Windows
 1. 从 [Gitee](https://gitee.com/flyingtang/flyingterm/releases) 或 [GitHub](https://github.com/flyingtang/flyingterm/releases) 下载 `FlyingTerm_*_x64-setup.exe`。
 2. 运行安装程序（需 Windows 10 1809+ / 11；安装包内嵌 WebView2 **离线**安装组件，不依赖微软 CDN）。
+   - 若提示「安装被中止 / 无法写入文件」：先完全退出 FlyingTerm（含托盘），在任务管理器结束残留的 `FlyingTerm.exe`，再重跑安装。
    - 若仍提示 WebView2 失败：先手动安装 [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703)，再重跑安装包。
 3. 从开始菜单启动 **FlyingTerm**。
 

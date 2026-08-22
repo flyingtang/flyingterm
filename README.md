@@ -30,7 +30,7 @@ Personal and educational use — see [LICENSE](LICENSE).
 - Themes and status-bar latency
 - **MultiExec** broadcast + multi-line compose (Ctrl+Enter)
 - Quick-commands bar (snippets)
-- Local shell (Windows: prefers Git Bash — bundled MinGit or system Git)
+- Local shell (Windows: prefers Git Bash — system Git by default; optional fat installer ships PortableGit)
 - Terminal recording / playback
 
 ### Script engine (macros)
@@ -58,6 +58,7 @@ Full desktop-product RDP extras (drive/printer redirect, GPU), full X.org bundle
 ### Windows
 1. Download `FlyingTerm_*_x64-setup.exe` from [Gitee](https://gitee.com/flyingtang/flyingterm/releases) or [GitHub](https://github.com/flyingtang/flyingterm/releases).
 2. Run the installer (Windows 10 1809+ / 11; setup embeds the WebView2 **offline** installer — no Microsoft CDN required).
+   - If install aborts with “unable to write file”: fully quit FlyingTerm (and tray), end leftover `FlyingTerm.exe` in Task Manager, then re-run setup.
    - If WebView2 still fails: install [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703) manually, then re-run setup.
 3. Start **FlyingTerm** from the Start menu.
 
