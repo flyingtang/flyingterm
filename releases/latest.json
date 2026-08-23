@@ -1,18 +1,18 @@
 {
   "version": "0.1.2",
   "notes": "FlyingTerm 0.1.2 — slim Windows build without bundled WebView2; prefer Gitee in China.",
-  "pub_date": "2026-08-23T11:53:57.520Z",
+  "pub_date": "2026-08-23T16:43:02.796Z",
   "platforms": {
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTm43Y0dtOHFMMmg5cGtDUnQ3dTlPZGFwdHd1TVZmM0FaZTd2cjhMY3BjOFZjMC9ER0xSaG1vK2ltQnZFYXVISnFvMWNjVmtGait6aFNqTjJBdkdhM0FRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDEyMjUzCWZpbGU6Rmx5aW5nVGVybV8wLjEuMl94NjQtc2V0dXAuZXhlCjh0cUxXcEZWUmduaE5qelgzT2g1L2NxVzdsMmg2SlNKcjc3VElDV1BGVElmc3Ztc0xiNGs0cXJYU05JclBsR2pLWGl1UEIxV2hxRzhXZTJReTNBeUFBPT0K",
       "url": "https://gitee.com/flyingtang/flyingterm/releases/download/v0.1.2/FlyingTerm_0.1.2_x64-setup.exe"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTnFDYmozNmZnd1NURElJZ3ZlZS9mdjNCYkZ2R0YrV0crblVteHNzZThQbnlRTUFsTXdzRGVuNHorL2tpeHJONlRVUG1YeGxRbE9EZnZSaGFLZDBTNlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDg2MDM3CWZpbGU6Rmx5aW5nVGVybS5hcHAudGFyLmd6Ck5HWVRpdWdvekphbnU2VEFEYlY3QXhMYWRmdXcyTWVxVFY1WjVvOUw3YUZ1MHhoaWFsWW9UeFBtQXh3QjcwTVBjcXhkVzduMkpFV2IwSmRlQzloWURRPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTm12S1NGN1NDR0t2eTdpbDkwR1ZoUWlnUTBmdTJxUy9hb1lwckp1OTZsSHVwd2h3N3NtbklHazZkYktXMnFRMmFaeTY3VnhtYjlQRS9LbXRYZGdnT2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NTAzMzgyCWZpbGU6Rmx5aW5nVGVybS5hcHAudGFyLmd6CnFxZnVNaTRaOVZ6b3EyRjZjMW1FT2VVcVlNR3JhRnZLWEtWMHJJVkUxRCtMWHZrU3hmZFRVNmZGenZVcTF2VzFob0hnZCtSZ0FYOUhKemI4TWtqbURnPT0K",
       "url": "https://github.com/flyingtang/flyingterm/releases/download/v0.1.2/FlyingTerm.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTnFDYmozNmZnd1NURElJZ3ZlZS9mdjNCYkZ2R0YrV0crblVteHNzZThQbnlRTUFsTXdzRGVuNHorL2tpeHJONlRVUG1YeGxRbE9EZnZSaGFLZDBTNlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDg2MDM3CWZpbGU6Rmx5aW5nVGVybS5hcHAudGFyLmd6Ck5HWVRpdWdvekphbnU2VEFEYlY3QXhMYWRmdXcyTWVxVFY1WjVvOUw3YUZ1MHhoaWFsWW9UeFBtQXh3QjcwTVBjcXhkVzduMkpFV2IwSmRlQzloWURRPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTm12S1NGN1NDR0t2eTdpbDkwR1ZoUWlnUTBmdTJxUy9hb1lwckp1OTZsSHVwd2h3N3NtbklHazZkYktXMnFRMmFaeTY3VnhtYjlQRS9LbXRYZGdnT2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NTAzMzgyCWZpbGU6Rmx5aW5nVGVybS5hcHAudGFyLmd6CnFxZnVNaTRaOVZ6b3EyRjZjMW1FT2VVcVlNR3JhRnZLWEtWMHJJVkUxRCtMWHZrU3hmZFRVNmZGenZVcTF2VzFob0hnZCtSZ0FYOUhKemI4TWtqbURnPT0K",
       "url": "https://github.com/flyingtang/flyingterm/releases/download/v0.1.2/FlyingTerm.app.tar.gz"
     }
   }
