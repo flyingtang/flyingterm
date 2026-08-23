@@ -44,7 +44,7 @@ npm run release -- --version 0.1.1
 | 本机系统 | 默认产物 |
 |---------|---------|
 | Windows | 默认打 **两份** NSIS：精简 `*_x64-setup.exe`（不内嵌 WebView2，走 Gitee）+ 完整 `*_x64-setup-webview2.exe`（内嵌离线包，走 GitHub）。只要精简：`--skip-full`。需要 MSI 时加 `--bundles nsis,msi`。默认不内置 Git Bash；需要时：`npm run build:nsis:gitbash` |
-| macOS | universal `.app` / `.dmg`（含双架构远程桌面客户端） |
+| macOS | **两份**：`x86_64` `.app` / `.dmg`（老 Intel / Ventura，RDP 优先用本机 MacPorts）+ `universal`（Apple Silicon / 新 macOS）。只打一种：`--target x86_64-apple-darwin` 或 `--target universal-apple-darwin` |
 | Linux | deb + rpm + AppImage |
 
 流程：签名打包 → 暂存 `open/releases/` → 同步公开仓文档 → 上传 GitHub / Gitee **Releases**。
@@ -52,7 +52,8 @@ npm run release -- --version 0.1.1
 注意：
 
 - 安装包**不会**进 git；`--sync` 只推文档 / `latest.json` / `latest-full.json`。
-- 精简版 updater 读 `latest.json`（安装包 URL 指向 Gitee）；完整版读 `latest-full.json`（安装包 URL 指向 GitHub）。Gitee Release 附件上限 100MB，完整版 exe 只上传 GitHub。
+- 精简版 updater 读 `latest.json`（安装包 URL 指向 Gitee）；完整版读 `latest-full.json`（安装包 URL 指向 GitHub）。Gitee Release 附件上限 100MB，完整版 exe / `*-webview2*` **不会**上传 Gitee。
+- `--upload` 会删掉该 tag 上其它版本号的附件，以及体积异常的安装包（例如 4 字节空壳）。只清远端、不重打安装包：`npm run open:publish -- --prune`
 - 一条命令只打**当前系统**的包。三端完整发布需在 Win / Mac / Linux 各跑一次 `npm run release`（后跑的会合并进同一 Release tag）。
 - 已打好包只需上传：`npm run release -- --skip-build`
 - 只要同步文档：`npm run open:publish -- --sync`
@@ -77,7 +78,7 @@ Same command on Windows / macOS / Linux — OS is detected automatically.
 | Host OS | Default bundles |
 |---------|-----------------|
 | Windows | two NSIS builds: slim (no WebView2, Gitee) + full `*-webview2.exe` (GitHub). Use `--skip-full` for slim only. Add msi with `--bundles nsis,msi`. Git Bash is **not** bundled by default |
-| macOS | universal app + dmg |
+| macOS | x86_64 + universal app + dmg (two builds per release on Mac) |
 | Linux | deb, rpm, appimage |
 
 Never commit `publish-open.local.env` / `secrets/` / `*.token`.
