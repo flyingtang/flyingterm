@@ -1,10 +1,10 @@
 {
   "version": "0.1.3",
   "notes": "FlyingTerm 0.1.3 (WebView2 full) — installer includes the offline runtime; download from GitHub.",
-  "pub_date": "2026-08-26T12:57:35.722Z",
+  "pub_date": "2026-08-29T14:21:19.960Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTmxoZG0xRHMzeEtyeVVWdUpRZWJ3Q3kzUm5oQlZrUytVdW02bzBvSHhTVTdqR29aRFg5Tjk0N0x0MTV3ajNLMXNtQXQzVFI1b0RIeDA3dDFjZVJ1NWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NzQ5MDU1CWZpbGU6Rmx5aW5nVGVybV8wLjEuM194NjQtc2V0dXAuZXhlCmhnb2FHTWZGNzRVZlo5Yll5YUwwYkpEVmNDclE1UVVMRVFmQWpTelhHVlg1YlIrelRTUk9UY1VTZE9rT1VGdFhTMmJZSTh2dW5haWFVVkhIbzZZVENBPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTml6YUU1eCtpYXVET2JxQ1NzMldOR1AvUjRUaHVRMG5XdVF3bFIvNS8wcHJqb2xkODFaVC9zb0N6M1ZscXRaZHRPQ3ZVeng3YkFyWEcwOVlLT1pCbHdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDEzMjc5CWZpbGU6Rmx5aW5nVGVybV8wLjEuM194NjQtc2V0dXAuZXhlCmJPKzVRUU9TVXp2dmRuSTgxTXVBTnZyWi80M1NRZko5Z0RwYjNBZVIxZTl5czd0aHRUd2szZHpJWXlWQnJjUHZQNUJQR2M2eUJuSTA5TlJyUUZ2MEF3PT0K",
       "url": "https://github.com/flyingtang/flyingterm/releases/download/v0.1.3/FlyingTerm_0.1.3_x64-setup-webview2.exe"
     }
   }
