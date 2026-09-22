@@ -1,7 +1,7 @@
 {
   "version": "0.1.3",
   "notes": "FlyingTerm 0.1.3 — slim Windows build without bundled WebView2; prefer Gitee in China.",
-  "pub_date": "2026-09-22T01:11:57.708Z",
+  "pub_date": "2026-09-22T01:14:34.134Z",
   "platforms": {
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUVU84OEl1aUVrTnZFOGhvRFZ0eVlleDBOMjZBQyt0Um9PelN0NzdMK2pEcHBoUTJITUE3OHA1SkRXRC9tMG9PQXQ3R3lqeDBFS1YxR1VIcUZUbERnSGFSclJybjMvWmdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwMDA0NDA2CWZpbGU6Rmx5aW5nVGVybV8wLjEuM194NjQtc2V0dXAuZXhlClNNZW9BUitKZG1lQ1ZTSE9QdFNrYjZSdlRnV3JXUzRkSHFvczZ1YXRwNzVCUXJNRk5lQXRSN2ZKN0dIem1UNUxWSlJJM3BhZmlscStrSU9wQkxoZURnPT0K",
